@@ -23,3 +23,37 @@ Spotify's development mode restrictions apply. Helios stores your Spotify refres
 - Custom layouts, a miniplayer, game mode, and a sleep timer.
 
 Uses between 100-500mb RAM, depending on backgrounds, effects, etc. Further optimizations to come. Manual memory restriction & game mode included.
+
+## How it works
+
+Helios is a desktop app built with Tauri, Rust, Svelte, and TypeScript. It uses the Spotify Web Playback SDK and Web API to play music and control your Spotify session. Your Spotify app's client ID is used for sign-in; no client secret is needed.
+
+Lyrics are fetched from LRCLIB and NetEase when available. You can pick a different match, adjust the timing, or load an LRC, SRT, VTT, or text file. Lyrics and timing depend on what the sources provide.
+
+Music videos are searched on YouTube. The visualizer reads the audio playing on Windows. Settings and custom backgrounds are stored locally. Spotify, lyric providers, and YouTube receive requests when their features are used.
+
+## Controls
+
+| Key | Action |
+| --- | --- |
+| Space | Play or pause |
+| Q | Open the queue |
+| P | Toggle the miniplayer |
+| G | Toggle game mode |
+| T / F | TV mode / fullscreen |
+| V | Open the music video |
+| [ / ] | Adjust lyrics timing for the current song |
+| , | Open settings |
+
+More shortcuts and display options are in Settings.
+
+## Build from source
+
+Install [Bun](https://bun.sh/) and the [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/), including Rust and the Windows build tools. Then run:
+
+```sh
+bun install
+bun run tauri dev
+```
+
+Run `bun run tauri build` to build an installer.
