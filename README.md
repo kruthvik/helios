@@ -21,3 +21,5 @@ Spotify's development mode restrictions apply. Helios stores your Spotify refres
 - Animated backgrounds, effects, and an audio visualizer.
 - Music videos and custom image, GIF, or video backgrounds.
 - Custom layouts, a miniplayer, game mode, and a sleep timer.
+
+Uses between 100-500mb RAM, depending on backgrounds, effects, etc. Further optimizations to come. Manual memory restriction & game mode included.
